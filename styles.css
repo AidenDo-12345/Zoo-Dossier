@@ -1,0 +1,16 @@
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.animal-grid article {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.animal-grid article img {
+    width: 100%;
+    height: auto;
+}
