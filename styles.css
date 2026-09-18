@@ -1,16 +1,40 @@
-.animal-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
+body {
+    background-color: azure;
 }
 
-.animal-grid article {
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 1rem;
+img {
+    max-width: 100%;
 }
+#dossier-cards {
+    display: flex;
+    flex-flow: row wrap;
+}
+    .card {
+        background-color: aliceblue;
+        width: 47.5%;
+        border: sold 1px black;
+        border-radius: 1rem;
+        box-shadow: o.5rem 1rem rgba(0,0,0,0.33);
+    }
 
-.animal-grid article img {
-    width: 100%;
-    height: auto;
-}
+    .card > img {
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .card h3,
+    .card p,
+    .card a {
+        margin: 0.5rem;
+    }
+
+    .card {
+        background-color: aliceblue;
+        border: solid 1px black;
+        border-radius: 1rem;
+        box-shadow: 0.25rem 0.5rem 0.25rem black;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        transition: all ease-in-out 300ms;
+        display: grid;
+        grid-template-rows: max-content auto 1fr;
+    }
