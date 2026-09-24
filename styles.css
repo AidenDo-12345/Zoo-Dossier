@@ -1,5 +1,32 @@
 body {
     background-color: azure;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: ;
+}
+
+#main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.25rem 0;
+}
+
+#main-nav>a:nth-child(1) {
+    background-color: orange;
+}
+#main-nav>a:nth-child(2) {
+    background-color: green;
+}
+#main-nav>a:nth-child(3) {
+    background-color: black;
+}
+#main-nav>a:nth-child(4) {
+    background-color: aqua;
 }
 
 
@@ -11,58 +38,58 @@ body {
     font-size: 1.5rem;
     text-decoration: none;
     transition: all ease-in-out .5s;
-    border-radius: 100px;
+
 }
 
 #main-nav>a:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+    transform: translateY(-0.125rem);
+    opacity: 0.9;
 }
 
 img {
     max-width: 100%;
 }
+
 #dossier-cards {
+    justify-content: center;
+    text-align: center;
     display: flex;
     flex-flow: row wrap;
     gap: 2rem;
 
 }
-    .card {
-        background-color: aliceblue;
-        width: 47.5%;
-        border: sold 1px black;
-        border-radius: 0.3rem;
-        box-shadow: o.25rem .5rem 0.25rem rgba(0,0,0,0.33);
-        padding-bottom: 1rem;
-        overflow: hidden;
-    }
 
-    .card img {
-        width: 100%;
-        height: 16rem;
-        display: block;
-        object-fit: cover;
-    }
+.card {
+    background-color: aliceblue;
+    width: 47.5%;
+    border: sold 1px black;
+    border-radius: 0.3rem;
+    box-shadow: o.25rem .5rem 0.25rem rgba(0, 0, 0, 0.33);
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
 
-    .card h3,
-    .card p {
-        margin: 0.5rem;
-    }
+.card img {
+    width: 100%;
+    height: 16rem;
+    display: block;
+    object-fit: cover;
+}
 
-    .card {
+.card h3,
+.card p {
+    margin: 0.5rem;
+}
+
+.card {
     width: 24em;
-        background-color: aliceblue;
-        border: solid 1px black;
-        border-radius: 1rem;
-        box-shadow: 0.25rem 0.5rem 0.25rem black;
-        padding-bottom: 1rem;
-        margin-bottom: 2rem;
-        transition: all ease-in-out 300ms;
-        display: grid;
-        grid-template-rows: max-content auto 1fr;
-    }
-
-
-
- 
+    background-color: orange;
+    border: solid 1px black;
+    border-radius: 1rem;
+    box-shadow: 0.25rem 0.5rem 0.25rem black;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    transition: all ease-in-out 300ms;
+    display: grid;
+    grid-template-rows: max-content auto 1fr;
+}
