@@ -1,49 +1,74 @@
+:root {
+    --siamang-color: #8FAE81;
+    --turtle-color: #C2A66B;
+    --vulture-color: #A6A9AD;
+    --rasbora-color: #E8B93F;
+    --page-background: rgb(1, 86, 57);
+}
+
 body {
-    background-color: azure;
+    background-color: var(--page-background);
     text-align: center;
 }
 
-h1 {
-    font-size: 4rem;
-    text-align: ;
+#site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: #182922;
+    padding: 1rem 2rem;
+}
+
+h1,
+.site-title {
+    font-size: 1.75rem;
+    color: white;
+    margin: 0;
+    white-space: nowrap;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #main-nav {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1.25rem 0;
+    gap: 1.5rem;
 }
 
 #main-nav>a:nth-child(1) {
-    background-color: orange;
+    color: var(--siamang-color);
 }
 #main-nav>a:nth-child(2) {
-    background-color: green;
+    color: var(--turtle-color);
 }
 #main-nav>a:nth-child(3) {
-    background-color: black;
+    color: var(--vulture-color);
 }
 #main-nav>a:nth-child(4) {
-    background-color: aqua;
+    color: var(--rasbora-color);
 }
 
 
 #main-nav>a {
-    background-color: rgb(255, 109, 56);
-    color: rgb(0, 0, 0);
     display: inline-block;
-    padding: 0.6em;
-    font-size: 1.5rem;
+    padding: 0.5em 0.75em;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
     text-decoration: none;
-    transition: all ease-in-out .5s;
+    transition: transform ease-in-out .2s, box-shadow ease-in-out .2s, background-color ease-in-out .2s;
 
 }
 
 #main-nav>a:hover {
-    transform: translateY(-0.125rem);
-    opacity: 0.9;
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
 img {
@@ -82,7 +107,8 @@ img {
 }
 
 .card {
-    width: 24em;
+    width: calc(25% - 1.5rem);
+    box-sizing: border-box;
     background-color: orange;
     border: solid 1px black;
     border-radius: 1rem;
@@ -92,4 +118,240 @@ img {
     transition: all ease-in-out 300ms;
     display: grid;
     grid-template-rows: max-content auto 1fr;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+#dossier-cards .card:nth-child(1) {
+    background-color: var(--siamang-color);
+}
+#dossier-cards .card:nth-child(2) {
+    background-color: var(--turtle-color);
+}
+#dossier-cards .card:nth-child(3) {
+    background-color: var(--vulture-color);
+}
+#dossier-cards .card:nth-child(4) {
+    background-color: var(--rasbora-color);
+}
+
+/* ---------- Species Dossier Pages ---------- */
+
+.theme-siamang {
+    --accent: var(--siamang-color);
+}
+.theme-turtle {
+    --accent: var(--turtle-color);
+}
+.theme-vulture {
+    --accent: var(--vulture-color);
+}
+.theme-rasbora {
+    --accent: var(--rasbora-color);
+}
+
+body.animal-page {
+    text-align: left;
+    background-color: var(--page-background);
+    color: #1a1a1a;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    background-color: #182922;
+}
+
+.hero img {
+    flex: 1 1 320px;
+    max-width: 45%;
+    max-height: 26rem;
+    object-fit: cover;
+}
+
+.hero-text {
+    flex: 1 1 320px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    white-space: normal;
+    margin: 0;
+}
+
+.hero-text .scientific-name {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin: 0;
+}
+
+.status-badge {
+    display: inline-block;
+    width: fit-content;
+    background-color: var(--accent);
+    color: #14231d;
+    font-weight: bold;
+    padding: 0.4em 0.9em;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+}
+
+.animal-page main article {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.animal-page .sidebar {
+    order: 2;
+    flex: 1 1 16rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.animal-page .main-content {
+    order: 1;
+    flex: 3 1 20rem;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.animal-page #overview {
+    background-color: white;
+    border: 1px solid #d7ded9;
+    border-left: 6px solid var(--accent);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.animal-page #overview h2 {
+    margin-top: 0;
+}
+
+.animal-page #overview table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.animal-page #overview caption {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+.animal-page #overview th,
+.animal-page #overview td {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #e2e2e2;
+    vertical-align: top;
+}
+
+.animal-page #overview th {
+    width: 40%;
+    color: #445;
+}
+
+.animal-page .sidebar > section,
+.animal-page .main-content > section {
+    background-color: white;
+    border-radius: 0.5rem;
+    border-left: 6px solid var(--accent);
+    padding: 1.5rem;
+}
+
+.animal-page .sidebar > section > h2,
+.animal-page .main-content > section > h2 {
+    color: white;
+    background-color: var(--accent);
+    display: inline-block;
+    padding: 0.4em 1em;
+    border-radius: 0.3rem;
+    font-size: 1.4rem;
+    margin-top: 0;
+}
+
+.animal-page article h3 {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.3rem;
+}
+
+.animal-page article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.animal-page article table caption {
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.animal-page article th,
+.animal-page article td {
+    border: 1px solid #d7ded9;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+}
+
+.animal-page article thead th {
+    background-color: var(--accent);
+    color: white;
+}
+
+.animal-page article section section {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0.15rem 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.5rem;
+}
+
+.animal-page article section section img {
+    width: 100%;
+    height: 22rem;
+    object-fit: cover;
+    display: block;
+}
+
+.animal-page article section section p {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    color: #444;
+    margin: 0;
+}
+
+.animal-page #references a {
+    color: var(--accent);
+}
+
+.animal-page footer {
+    background-color: #182922;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.animal-page footer a {
+    color: white;
 }

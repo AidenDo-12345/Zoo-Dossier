@@ -5,24 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scissortail Rasbora Aiden's Animal Dossier</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="animal-page theme-rasbora">
 
-    <header>
-        <nav>
-            <a href="index.html">Back to Aiden's Animal Dossier</a>
+    <header id="site-header">
+        <a href="index.html" class="site-title">Aiden's Animal Dossier</a>
+        <nav id="main-nav" role="main-nav">
+            <a href="siamang.html" class="nav-button">Siamang Gibbon</a>
+            <a href="snaketurtle.html" class="nav-button">Snake-necked Turtle</a>
+            <a href="blackvltr.html" class="nav-button">Black Vulture</a>
+            <a href="scissortailrsba.html" class="nav-button">Scissortail Rasbora</a>
         </nav>
-        <h1>Scissortail Rasbora</h1>
-        <p><em>Rasbora trilineata</em> (Steindachner, 1870)</p>
-        <p>Conservation Status: <strong>Least Concern</strong></p>
     </header>
+
+    <section class="hero">
+        <img src="Scissortail.jpg"
+            alt="A photo of a Scissortail Rasbora inside of a water tank looking back into the camera">
+        <div class="hero-text">
+            <h1>Scissortail Rasbora</h1>
+            <p class="scientific-name"><em>Rasbora trilineata</em> (Steindachner, 1870)</p>
+            <p class="status-badge">Conservation Status: Least Concern</p>
+        </div>
+    </section>
     <main>
         <article>
+            <div class="sidebar">
             <aside id="overview">
                 <h2>Basic Information</h2>
                 <table>
-                    <caption>Table 1. Key facts at a glance</caption>
                     <tbody>
                         <tr>
                             <th scope="row">Common Names</th>
@@ -68,7 +80,6 @@
             <section id="classification">
                 <h2>Scientific Classification</h2>
                 <table>
-                    <caption>Table 2. Full taxonomic classification</caption>
                     <thead>
                         <tr>
                             <th>Rank</th>
@@ -126,11 +137,13 @@
                             href="#ref-3">[3]</a></sup>
                 </p>
             </section>
+            </div>
+
+            <div class="main-content">
             <section id="physical">
                 <h2>Physical Profile</h2>
                 <h3>Size Range</h3>
                 <table>
-                    <caption>Table 3. Morphometric data<sup><a href="#ref-2">[2]</a></sup></caption>
                     <thead>
                         <tr>
                             <th>Measurement</th>
@@ -185,8 +198,7 @@
                 <ul>
                     <li>Slow to moderately flowing rivers and streams with sandy or gravelly substrates</li>
                     <li>Floodplain pools and backwater channels connected to main river channels</li>
-                    <li>Clear blackwater streams with tannin-stained, acidic water (particularly in Borneo and Sumatra)
-                    </li>
+                    <li>Clear blackwater streams with tannin-stained, acidic water (particularly in Borneo and Sumatra)</li>
                     <li>Margins of larger rivers where vegetation provides shelter</li>
                     <li>Occasionally found in forest streams shaded by dense riparian canopy</li>
                 </ul>
@@ -215,8 +227,6 @@
                     invertebrates drifting in the current.<sup><a href="#ref-2">[2]</a></sup>
                 </p>
                 <table>
-                    <caption>Table 4. Diet composition of <em>R. trilineata</em><sup><a href="#ref-2">[2]</a></sup>
-                    </caption>
                     <thead>
                         <tr>
                             <th>Food Category</th>
@@ -375,6 +385,7 @@
                     </li>
                 </ol>
             </section>
+            </div>
         </article>
     </main>
     <footer>
