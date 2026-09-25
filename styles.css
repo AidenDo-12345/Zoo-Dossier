@@ -2,7 +2,7 @@
     --siamang-color: #8FAE81;
     --turtle-color: #C2A66B;
     --vulture-color: #A6A9AD;
-    --rasbora-color: #E8B93F;
+    --rasbora-color: #fab554bf;
     --page-background: rgb(1, 86, 57);
 }
 
@@ -42,12 +42,15 @@ h1,
 #main-nav>a:nth-child(1) {
     color: var(--siamang-color);
 }
+
 #main-nav>a:nth-child(2) {
     color: var(--turtle-color);
 }
+
 #main-nav>a:nth-child(3) {
     color: var(--vulture-color);
 }
+
 #main-nav>a:nth-child(4) {
     color: var(--rasbora-color);
 }
@@ -76,12 +79,9 @@ img {
 }
 
 #dossier-cards {
-    justify-content: center;
-    text-align: center;
     display: flex;
     flex-flow: row wrap;
     gap: 2rem;
-
 }
 
 .card {
@@ -127,27 +127,33 @@ img {
 #dossier-cards .card:nth-child(1) {
     background-color: var(--siamang-color);
 }
+
 #dossier-cards .card:nth-child(2) {
     background-color: var(--turtle-color);
 }
+
 #dossier-cards .card:nth-child(3) {
     background-color: var(--vulture-color);
 }
+
 #dossier-cards .card:nth-child(4) {
     background-color: var(--rasbora-color);
 }
 
-/* ---------- Species Dossier Pages ---------- */
+/* ---------- Species Dossier Pages ---------- down there */
 
 .theme-siamang {
     --accent: var(--siamang-color);
 }
+
 .theme-turtle {
     --accent: var(--turtle-color);
 }
+
 .theme-vulture {
     --accent: var(--vulture-color);
 }
+
 .theme-rasbora {
     --accent: var(--rasbora-color);
 }
@@ -271,16 +277,16 @@ body.animal-page {
     color: #445;
 }
 
-.animal-page .sidebar > section,
-.animal-page .main-content > section {
+.animal-page .sidebar>section,
+.animal-page .main-content>section {
     background-color: white;
     border-radius: 0.5rem;
     border-left: 6px solid var(--accent);
     padding: 1.5rem;
 }
 
-.animal-page .sidebar > section > h2,
-.animal-page .main-content > section > h2 {
+.animal-page .sidebar>section>h2,
+.animal-page .main-content>section>h2 {
     color: white;
     background-color: var(--accent);
     display: inline-block;
@@ -329,7 +335,7 @@ body.animal-page {
 
 .animal-page article section section img {
     width: 100%;
-    height: 22rem;
+    height: 40rem;
     object-fit: cover;
     display: block;
 }
@@ -354,4 +360,16 @@ body.animal-page {
 
 .animal-page footer a {
     color: white;
+}
+
+#description {
+    color: white;
+    border-radius: .4;
+    margin: 2rem;
+}
+
+#LARP {
+    color: white;
+    border-radius: .4;
+    padding-top: 16rem;
 }
