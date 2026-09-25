@@ -373,3 +373,8 @@ body.animal-page {
     border-radius: .4;
     padding-top: 16rem;
 }
+
+#heh {
+    text-decoration: none;
+    color: inherit    
+}
